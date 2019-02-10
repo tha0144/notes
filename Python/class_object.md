@@ -1,0 +1,1 @@
+# [Pythonにおけるクラスとオブジェクト](https://www.sejuku.net/blog/28182)
