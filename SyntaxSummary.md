@@ -23,6 +23,51 @@ variable
     @instanceVariable
     ```
 
+
+## コメントアウト
+### PHP
+```php
+// 一行コメント
+
+/*
+複数行コメント
+*/
+```
+### Python
+```python
+# コメント
+```
+### Ruby
+```ruby
+# 一行コメント
+
+=begin
+複数行コメント
+=end
+```
+
+## 文字列の結合
+### PHP
+```php
+'A'.'B' // .で結合
+
+$str1 = 'A';
+$str2 = 'B';
+$str = $str1 . $str2 // 変数の場合も同様。.の前後に半角スペースがあっても良い
+```
+### Python
+```python
+'A' + 'B'  # 基本は結合演算子 + を使う
+s = 'A''B''C'  # 変数ではないナマの文字列だと + 不要。\による改行も無視される
+s = 'A' + 1  # これはだめ。型が違うやつはエラーになる
+s = 'A' + '1'  # これはおｋ
+```
+[こっち](https://note.nkmk.me/python-string-concat/)も参照
+### Ruby
+```ruby
+```
+
+
 ## 関数の定義と呼び出し
 ### PHP
 ```php
@@ -36,7 +81,7 @@ functionName(values)
 ### Python
 ```python
 def functionName(varaiables, defaultVaraibles = defValue)
-    ... # 必ず字下げが必要（Pythonでは字下げが意味を持つ）
+    ...  # 必ず字下げが必要（Pythonでは字下げが意味を持つ）
 
 # 呼び出し
 functionName(values [, values])
@@ -65,6 +110,7 @@ end
 functionName(values)
 ```
 
+
 ## クラスについての諸々
 クラスの定義と継承、コンストラクタ、メソッド、インスタンス化などなど
 ### PHP
@@ -83,16 +129,20 @@ Class ClassName Extends ParentClassName {
 
 // インスタンス化
 $instance = new ClassName(constructerVariables);
+
+// インスタンスの変数のsetとget
+$instance->instanceVariableName = setValue; // set
+$instance->instanceVariableName // get
 ```
 ### Python
 ```python
 class ClassName(ParentClassName):
     # コンストラクタ
-    def __init__(self, contructerVariables): # インスタンス自信を指すselfは必須！
+    def __init__(self, contructerVariables):  # インスタンス自信を指すselfは必須！
         ...
     
     # メソッド
-    def methodName(self, variables): # やはりselfは必須
+    def methodName(self, variables):  # やはりselfは必須
         ...
 
 # 字下げがなくなった地点で「クラスの定義が終了した」と自動的に認識される
